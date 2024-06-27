@@ -6,11 +6,12 @@ import Preloader from 'app/components/ui/PreloaderComponent';
 import SiteHeader from './layouts/header';
 import { CompanyDataProps } from 'app/interfaces/ApiProps';
 import { Metadata } from 'next';
-import { SpeedInsights } from "@vercel/speed-insights/next"
 const SiteFooter = lazy(() => import('app/layouts/footer'));
-const CustomCursor = lazy(() => import('app/components/js/customCursor'));
 export const metadata: Metadata = {
   metadataBase: new URL('https://api.bibekphotography.com.au'),
+  verification: {
+    google: 'xg8Wd83e_Mp05Qzy9NIYTIFjf0E7rn8mReY7hH4a2s0',
+  },
 }
 export const revalidate = 0;
 async function getData():Promise<{ site_info: CompanyDataProps}>{

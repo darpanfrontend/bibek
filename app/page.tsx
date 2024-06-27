@@ -14,7 +14,6 @@ async function getData(): Promise<{ home_banner: BannerProps; works: WorkProps[]
   }
   return res.json();
 }
-
 export async function generateMetadata(): Promise<Metadata> {
   // fetch data
   const meta = await fetch(`${process.env.APIURL}/meta-data/home-page`).then((res) => res.json())
